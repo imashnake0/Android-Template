@@ -29,12 +29,13 @@ rootProject.name = "Template"
 include(":app")
 
 plugins {
-    id("com.android.settings") version("8.2.0-beta01")
+    id("com.android.settings") version("9.2.1")
 }
 
-configure<SettingsExtension> {
-    buildToolsVersion = "34.0.0"
-    compileSdk = 34
+android {
+    buildToolsVersion = "37.0.0"
+    compileSdk = 37
+    targetSdk = 37
     minSdk = 29
 }
 
