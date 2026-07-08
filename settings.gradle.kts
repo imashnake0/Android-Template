@@ -1,6 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-import com.android.build.api.dsl.SettingsExtension
 import org.gradle.api.internal.FeaturePreviews
 
 
