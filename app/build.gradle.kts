@@ -1,6 +1,9 @@
 plugins {
+    alias(libs.plugins.koin.compiler)
     alias(libs.plugins.agp.app)
     alias(libs.plugins.compose.compiler)
+
+    kotlin("plugin.serialization") version "2.4.0"
 }
 
 android {
@@ -38,6 +41,11 @@ kotlin {
 }
 
 dependencies {
+    implementation(platform(libs.koin.bom))
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
